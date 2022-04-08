@@ -1,0 +1,41 @@
+body {
+  font-size: 3rem;
+}
+h1 {
+  background: #fff000;
+}
+.main-title {
+  display: inline-block;
+}
+#playbtn {
+}
+
+.w-btn:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.w-btn {
+  position: relative;
+  border: none;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+button {
+  margin: 20px;
+}
+.w-btn-brown {
+  background-color: #ce6d39;
+  color: #ffeee4;
+}
+.w-btn-yellow {
+  background-color: #fce205;
+  color: #6e6e6e;
+}
