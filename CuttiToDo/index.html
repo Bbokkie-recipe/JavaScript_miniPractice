@@ -5,9 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!--부트스트랩 링크는 반드시 내 스타일 위에 넣을 것-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!--class="container"는 부트스트랩에서 제공해줌-->
+    <div class="container">
+      <h1 class="main-font">Cutti Todo</h1>
+      <section class="input-area">
+        <input type="text" id="task-input" />
+        <button class="w-btn-pink w-btn" id="add-button" onclick>+</button>
+      </section>
+      <section class="task-area">
+        <div class="task-tabs">
+          <div id="under-line"></div>
+          <div class="main-font">All</div>
+          <div class="main-font">Not Done</div>
+          <div class="main-font">Perfect</div>
+        </div>
+        <di id="task-board">
+          <div class="task">
+            <div class="main-font">Cutti Todo👀 Let's start!😘</div>
+            <div>
+              <button class="w-btn-blue w-btn">Check</button>
+              <button class="w-btn-green w-btn">Delete</button>
+            </div>  
+          </div>
+        </div>
+      </section>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"https://youtu.be/Y2NNmhrsoNc
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js"></script>
   </body>
 </html>

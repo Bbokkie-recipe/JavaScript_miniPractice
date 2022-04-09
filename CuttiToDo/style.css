@@ -1,0 +1,83 @@
+body {
+  margin: 0px;
+  background-image: url("images/background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+div {
+  font-family: "Hi Melody", cursive;
+}
+.container {
+  background-color: rgb(250, 241, 241);
+  min-height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.w-btn:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.w-btn {
+  position: relative;
+  border: none;
+  display: inline-block;
+  padding: 3px 5px 3px 5px;
+  margin: 3px;
+  border-radius: 8px;
+  font-family: "Hi Melody", cursive;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.w-btn-pink {
+  background-color: pink;
+  color: #6e6e6e;
+}
+.w-btn-blue {
+  background-color: rgb(193, 208, 250);
+  color: #6e6e6e;
+}
+
+.w-btn-green {
+  background-color: rgb(199, 240, 208);
+  color: #6e6e6e;
+}
+.task-tabs {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+}
+.task-tabs div {
+  padding: 1em;
+}
+.task-area {
+  border: 1px solid lightgray;
+}
+#under-line {
+  height: 4px;
+  background-color: pink;
+  position: absolute;
+  width: 80px;
+  left: 0px;
+  top: 52px;
+  padding: 0px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.main-font {
+  font-family: "Hi Melody", cursive;
+}
