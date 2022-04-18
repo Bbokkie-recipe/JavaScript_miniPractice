@@ -12,10 +12,17 @@
 let taskInput = document.getElementById("task-input");
 console.log(taskInput);
 let addButton = document.getElementById("add-button");
-let deleteButton = document.getElementById("delete-button");
+let tabs = document.querySelectorAll(".task-tabs div");
 let taskList = [];
+let mode = "";
+let filterList = [];
 addButton.addEventListener("click", addTask);
-
+for (let i = 1; i < tabs.length; i++) {
+  tabs[i].addEventListener("click", function (event) {
+    filter(event);
+  });
+}
+console.log(tabs);
 function addTask() {
   console.log("click");
   let task = {
@@ -37,9 +44,15 @@ function deleteTask() {
 }
 
 function render() {
+  let list = [];
+  if (mode != "ongoing" && mode != "done") {
+    list = taskList;
+  } else if (mode == "ongoing" || mode == "done") {
+    list = filterList;
+  }
   let resultHTML = "";
-  for (let i = 0; i < taskList.length; i++) {
-    if (taskList[i].isCompleted == true) {
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].isCompleted == true) {
       resultHTML += `<div class="task">
     <div class ="task-done">${taskList[i].taskContent}</div>
     <div>
@@ -80,6 +93,29 @@ function deleteTask(id) {
   }
   console.log("삭제");
   render();
+}
+
+function filter(event) {
+  mode = event.target.id;
+  filterList = [];
+  console.log("filter 클림됨!", event.target.id);
+  if (mode == "all") {
+    render();
+  } else if (mode == "ongoing") {
+    for (let i = 0; i < taskList.length; i++) {
+      if (taskList[i].isCompleted == false) {
+        filterList.push(taskList[i]);
+      }
+    }
+    render();
+  } else if (mode == "done") {
+    for (let i = 0; i < taskList.length; i++) {
+      if (taskList[i].isCompleted == true) {
+        filterList.push(taskList[i]);
+      }
+    }
+    render();
+  }
 }
 
 function uid() {
