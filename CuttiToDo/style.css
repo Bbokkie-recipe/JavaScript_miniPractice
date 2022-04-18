@@ -81,3 +81,10 @@ div {
 .main-font {
   font-family: "Hi Melody", cursive;
 }
+
+.task-done {
+  text-decoration: line-through;
+}
+.task-tabs div {
+  cursor: pointer;
+}
